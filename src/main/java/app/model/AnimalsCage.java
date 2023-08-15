@@ -14,8 +14,9 @@ public class AnimalsCage {
     }
 
     @Autowired
-    public AnimalsCage(@Qualifier("dog") Animal animal) {
+    public AnimalsCage(@Qualifier("dog") Animal animal, @Qualifier("timer") Timer timer) {
         this.animal = animal;
+        this.timer = timer;
     }
 
     public void whatAnimalSay() {
